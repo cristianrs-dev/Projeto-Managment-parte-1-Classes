@@ -3,11 +3,14 @@ package br.com.classes;
 import java.time.LocalDate;
 
 public class Espaco {
+    private int idEspaco;
     private String[] descricao;
     private LocalDate horaInicio;
     private LocalDate horaTermino;
 
-    public Espaco(String[] descricao, LocalDate horaInicio, LocalDate horaTermino) {
+
+    public Espaco(int idEspaco, String[] descricao, LocalDate horaInicio, LocalDate horaTermino) {
+        this.idEspaco = idEspaco;
         this.descricao = descricao;
         this.horaInicio = horaInicio;
         this.horaTermino = horaTermino;

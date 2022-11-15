@@ -1,26 +1,30 @@
 package br.com.classes;
 
 public class Apartamento {
-    private int idAp;
+    private int idApartamento;
     private byte numeroApartamento;
     private byte qtdQuarto;
     private byte andar;
     private float valor;
+    private int idCondominio;
 
-    public Apartamento(int idAp, byte numeroApartamento, byte qtdQuarto, byte andar, float valor) {
-        this.idAp = idAp;
+   
+
+    public Apartamento(int idApartamento, byte numeroApartamento, byte qtdQuarto, byte andar, float valor, int idCondominio) {
+        this.idApartamento = idApartamento;
         this.numeroApartamento = numeroApartamento;
         this.qtdQuarto = qtdQuarto;
         this.andar = andar;
         this.valor = valor;
+        this.idCondominio = idCondominio;
     }
 
-    public int getIdAp() {
-        return idAp;
+    public int getIdApartamento() {
+        return idApartamento;
     }
 
-    public void setIdAp(int idAp) {
-        this.idAp = idAp;
+    public void setIdApartamento(int idApartamento) {
+        this.idApartamento = idApartamento;
     }
 
     public byte getNumeroApartamento() {
@@ -55,17 +59,23 @@ public class Apartamento {
         this.valor = valor;
     }
 
-  
+    public int getIdCondominio() {
+        return idCondominio;
+    }
 
+    public void setIdCondominio(int idCondominio) {
+        this.idCondominio = idCondominio;
+    }
+    
     public void mostrarApartamento(){
-            System.out.println("cod:.."+this.getIdAp());
+            System.out.println("----------Dados Apartamento---------");
+            System.out.println("Condominio:.."+this.getIdCondominio());
+            System.out.println("cod:.."+this.getIdApartamento());
             System.out.println("numero:.."+this.getNumeroApartamento());
             System.out.println("quartos:.."+this.getQtdQuarto());
             System.out.println("andar:.."+this.getAndar());
             System.out.println("valor:.."+this.getValor());
-           
-        
-        
+            
     }
     
 }
