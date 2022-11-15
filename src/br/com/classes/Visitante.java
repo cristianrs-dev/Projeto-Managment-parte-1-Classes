@@ -1,7 +1,7 @@
 package br.com.classes;
 
 public class Visitante extends PessoaFisica{
-
+      
     public Visitante(String nome, char sexo, String rg, String cpf) {
         super(nome, sexo, rg, cpf);
     }

@@ -1,18 +1,28 @@
 package br.com.classes;
 
 public class Veiculo {
+    private int idVeiculo;
     private String tipo;
     private String modelo;
     private String placa;
     private String cor;
 
-    public Veiculo(String tipo, String modelo, String placa, String cor) {
+    public Veiculo(int idVeiculo,String tipo, String modelo, String placa, String cor) {
+        this.idVeiculo=idVeiculo;
         this.tipo = tipo;
         this.modelo = modelo;
         this.placa = placa;
         this.cor = cor;
     }
 
+    public int getIdVeiculo() {
+        return idVeiculo;
+    }
+
+    public void setIdVeiculo(int idVeiculo) {
+        this.idVeiculo = idVeiculo;
+    }
+    
     public String getTipo() {
         return tipo;
     }
