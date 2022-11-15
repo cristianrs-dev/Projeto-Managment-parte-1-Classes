@@ -25,7 +25,7 @@ public class Secretaria extends PessoaFisica{
 */
     @Override
     public void mostrarDadosPessoa() {
-            System.out.println("---------Dados Secretaria------");
+           System.out.println("---------Dados Secretaria-------");
            System.out.println("Codigo:.."+this.getIdSecretaria());
            System.out.println("Secretaria------------");
            System.out.println("Nome:.."+this.getNome());

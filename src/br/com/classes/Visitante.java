@@ -1,11 +1,20 @@
 package br.com.classes;
 
 public class Visitante extends PessoaFisica{
-      
-    public Visitante(String nome, char sexo, String rg, String cpf) {
+    private int idVisita;
+    public Visitante(int idVisita,String nome, char sexo, String rg, String cpf) {
         super(nome, sexo, rg, cpf);
+        this.idVisita=idVisita;
     }
 
+    public int getIdVisita() {
+        return idVisita;
+    }
+
+    public void setIdVisita(int idVisita) {
+        this.idVisita = idVisita;
+    }
+    
     
 /*
     public void mostrarDadosVisitante() {
@@ -20,6 +29,7 @@ public class Visitante extends PessoaFisica{
     @Override
     public void mostrarDadosPessoa() {
         System.out.println("Visita----------------");
+            System.out.println("Codigo:.."+this.getIdVisita());
             System.out.println("Nome:.."+this.getNome());
             System.out.println("Sexo:.."+this.getSexo());
             System.out.println("Rg:.."+this.getRg());
