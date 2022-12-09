@@ -1,7 +1,7 @@
 package br.com.classes;
 
 public class Apartamento {
-    private int idApartamento;
+    private int id;
     private byte numeroApartamento;
     private byte qtdQuarto;
     private byte andar;
@@ -11,7 +11,7 @@ public class Apartamento {
    
 
     public Apartamento(int idApartamento, byte numeroApartamento, byte qtdQuarto, byte andar, float valor, int idCondominio) {
-        this.idApartamento = idApartamento;
+        this.id = idApartamento;
         this.numeroApartamento = numeroApartamento;
         this.qtdQuarto = qtdQuarto;
         this.andar = andar;
@@ -19,12 +19,12 @@ public class Apartamento {
         this.idCondominio = idCondominio;
     }
 
-    public int getIdApartamento() {
-        return idApartamento;
+    public int getId() {
+        return id;
     }
 
-    public void setIdApartamento(int idApartamento) {
-        this.idApartamento = idApartamento;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public byte getNumeroApartamento() {
@@ -70,7 +70,7 @@ public class Apartamento {
     public void mostrarApartamento(){
             System.out.println("----------Dados Apartamento---------");
             System.out.println("Condominio:.."+this.getIdCondominio());
-            System.out.println("cod:.."+this.getIdApartamento());
+            System.out.println("cod:.."+this.getId());
             System.out.println("numero:.."+this.getNumeroApartamento());
             System.out.println("quartos:.."+this.getQtdQuarto());
             System.out.println("andar:.."+this.getAndar());

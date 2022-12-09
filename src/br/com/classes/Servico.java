@@ -1,25 +1,25 @@
 package br.com.classes;
 
 public class Servico extends PessoaJuridica{
-    private int idServico;
+    private int id;
     private String[] descricao;
     private int idCondominio;
 
     public Servico(int idServico, String[] descricao, int idCondominio, String nome, String cnpj) {
         super(nome, cnpj);
-        this.idServico = idServico;
+        this.id = idServico;
         this.descricao = descricao;
         this.idCondominio = idCondominio;
     }
 
     
 
-    public int getIdServico() {
-        return idServico;
+    public int getId() {
+        return id;
     }
 
-    public void setIdServico(int idServico) {
-        this.idServico = idServico;
+    public void setId(int id) {
+        this.id = id;
     }
 
     
@@ -43,7 +43,7 @@ public class Servico extends PessoaJuridica{
 
     @Override
     public void mostrarDadosEmpresa() {
-        System.out.println("codigo:.."+this.getIdServico());
+        System.out.println("codigo:.."+this.getId());
         System.out.println("codigo condominio:.."+this.getIdCondominio());
         System.out.println("Nome:.."+this.getNome());
         System.out.println("Cnpj:.."+this.getCnpj());

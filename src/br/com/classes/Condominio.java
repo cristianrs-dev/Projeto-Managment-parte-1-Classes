@@ -3,7 +3,7 @@ package br.com.classes;
 import java.util.ArrayList;
 
 public class Condominio extends PessoaJuridica{
-    private int idCondominio;
+    private int id;
     private ArrayList<PessoaFisica>morador;
     private String endereco;
     private ArrayList<Apartamento> apartamento;
@@ -12,7 +12,7 @@ public class Condominio extends PessoaJuridica{
 
     public Condominio(int idCondominio,ArrayList<PessoaFisica> morador, String endereco, ArrayList<Apartamento> apartamento, ArrayList<Espaco> espaco, ArrayList<Documento> documento, String nome, String cnpj) {
         super(nome, cnpj);
-        this.idCondominio=idCondominio;
+        this.id=idCondominio;
         this.morador = morador;
         this.endereco = endereco;
         this.apartamento = apartamento;
@@ -25,12 +25,12 @@ public class Condominio extends PessoaJuridica{
         this.morador = morador;
     }
 
-    public int getIdCondominio() {
-        return idCondominio;
+    public int getId() {
+        return id;
     }
 
-    public void setIdCondominio(int idCondominio) {
-        this.idCondominio = idCondominio;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public ArrayList<PessoaFisica> getMorador() {
@@ -81,7 +81,7 @@ public class Condominio extends PessoaJuridica{
 
     @Override
     public void mostrarDadosEmpresa() {
-        System.out.println("Codigo:.."+this.getIdCondominio());
+        System.out.println("Codigo:.."+this.getId());
         System.out.println("nome:.."+this.getNome());
         System.out.println("cnpj:.."+this.getCnpj());
         System.out.println("endereco:.."+this.getEndereco());

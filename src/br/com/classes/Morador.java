@@ -2,6 +2,7 @@ package br.com.classes;
 
 
 public class Morador extends PessoaFisica{
+    private int id;
     private Apartamento apartamento;
     private Veiculo veiculo;
     private Visitante visita;
@@ -14,8 +15,9 @@ public class Morador extends PessoaFisica{
     private int idAp;
     private int idEspaco;
 
-    public Morador(Apartamento apartamento, Veiculo veiculo, Visitante visita, Secretaria secretaria, int idCondominio, int idSecretaria, int idVeiculo, int idServico, int idVisita, int idAp, int idEspaco, String nome, char sexo, String rg, String cpf) {
+    public Morador(int id, Apartamento apartamento, Veiculo veiculo, Visitante visita, Secretaria secretaria, int idCondominio, int idSecretaria, int idVeiculo, int idServico, int idVisita, int idAp, int idEspaco, String nome, char sexo, String rg, String cpf) {
         super(nome, sexo, rg, cpf);
+        this.id = id;
         this.apartamento = apartamento;
         this.veiculo = veiculo;
         this.visita = visita;
@@ -29,7 +31,13 @@ public class Morador extends PessoaFisica{
         this.idEspaco = idEspaco;
     }
 
-    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public Apartamento getApartamento() {
         return apartamento;

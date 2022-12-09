@@ -1,17 +1,17 @@
 package br.com.classes;
 
 public class Secretaria extends PessoaFisica{
-    private int idSecretaria;
+    private int id;
     public Secretaria(int idSecretaria ,String nome, char sexo, String rg, String cpf) {
         super(nome, sexo, rg, cpf);
     }
 
-    public int getIdSecretaria() {
-        return idSecretaria;
+    public int getId() {
+        return id;
     }
 
-    public void setIdSecretaria(int idSecretaria) {
-        this.idSecretaria = idSecretaria;
+    public void setId(int id) {
+        this.id = id;
     }
     
    /*
@@ -26,7 +26,7 @@ public class Secretaria extends PessoaFisica{
     @Override
     public void mostrarDadosPessoa() {
            System.out.println("---------Dados Secretaria-------");
-           System.out.println("Codigo:.."+this.getIdSecretaria());
+           System.out.println("Codigo:.."+this.getId());
            System.out.println("Secretaria------------");
            System.out.println("Nome:.."+this.getNome());
            System.out.println("Sexo:.."+this.getSexo());
