@@ -22,7 +22,7 @@ public class App
 
     public static void main(String[] args) 
     {
-        float vlQuarto,salarioFuncionario; byte op,nApartamento,qtdQuarto,andar; 
+        float vlQuarto,salarioFuncionario; byte op,nApartamento,qtdQuarto,andar;int id=1,idCond=001; 
         char sexoMorador,sexoSecretaria,sexoVisita,sexoFuncionario; LocalDate dataAdd,dataDem,horaInic,horaTerm;
         //morador
         String nomeMorador,rgMorador,cpfMorador,
@@ -53,32 +53,32 @@ public class App
                    //veiculo
                    tipoVeiculo=informarTipo(); modeloVeiculo=informarModelo();
                    placaVeiculo=informarPlaca(); corVeiculo=informarCor();
-                    veiculo = new Veiculo(tipoVeiculo, modeloVeiculo, placaVeiculo, corVeiculo);
+                    veiculo = new Veiculo(id,tipoVeiculo, modeloVeiculo, placaVeiculo, corVeiculo);
                    //secretaria
                    nomeSecretaria=informarNome();   sexoSecretaria=informarSexo();
                    rgSecretaria=informarRg();       cpfSecretaria=informarCpf();
-                     secretaria = new Secretaria(nomeSecretaria, sexoSecretaria, rgSecretaria, cpfSecretaria);
+                     secretaria = new Secretaria(id,"autorida",nomeSecretaria,sexoSecretaria,rgSecretaria,cpfSecretaria);
                    //apartamento
                    nApartamento=informeNumeroApartamento(); qtdQuarto=informeNumeroApartamento();
                    andar=informeAndar();vlQuarto=informeValor();
-                    apartamento= new Apartamento(nApartamento, qtdQuarto, andar, vlQuarto);
+                    apartamento= new Apartamento(id,nApartamento,qtdQuarto,andar,vlQuarto,null);
                    //visita
                    nomeVisita=informarNome(); sexoVisita=informarSexo();
                    rgVisita=informarRg(); cpfVisita=informarCpf();
-                     visita = new Visitante(nomeVisita, sexoVisita, rgVisita, cpfVisita);
+                     visita = new Visitante(id,nomeVisita, sexoVisita, rgVisita, cpfVisita);
                    
-                   Morador morador = new Morador(apartamento, veiculo, visita, secretaria, nomeMorador, sexoMorador, rgMorador, cpfMorador);
+                   Morador morador = new Morador(id,"proprietario",apartamento,veiculo,visita,secretaria,null,null,null,nomeMorador, sexoMorador,rgMorador,cpfMorador);
                    moradores.add(morador);
-                     condominio = new Condominio(moradores, nomeVisita, cpfVisita);
+                     condominio = new Condominio(moradores,"vilage","131510000-13");
                         condominio.mostrarListaMoradores();
                    break;
                case 2://cadastro de funcionario
                    nomeFuncionario=informarNome();sexoFuncionario=informarSexo();
                    rgFuncionario=informarRg();   cpfFuncionario=informarCpf();
                    Funcao=informarProfissao();  salarioFuncionario=informeValor();
-                   dataAdd=informeData();       dataDem=informeData();
-                        cargo =new Cargo(Funcao,salarioFuncionario, dataAdd, dataDem);
-                            funcionario = new Funcionario(cargo, nomeFuncionario, sexoFuncionario, rgFuncionario, cpfFuncionario);
+                   //dataAdd=informeData();       dataDem=informeData();
+                        cargo =new Cargo(id,Funcao,salarioFuncionario, null, null);
+                            funcionario = new Funcionario(cargo,null, Funcao, sexoFuncionario,rgFuncionario,cpfFuncionario);
                                 funcionario.mostrarDadosPessoa();
                    break;
                case 3:
@@ -90,7 +90,7 @@ public class App
                default:
                    System.out.println("informe uma opcao valida!");
            }
-           
+           id++;
        }while(op!=5);
     }
     

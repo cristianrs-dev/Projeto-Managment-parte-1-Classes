@@ -15,17 +15,6 @@ public class Visitante extends PessoaFisica{
         this.id = id;
     }
     
-    
-/*
-    public void mostrarDadosVisitante() {
-        System.out.println("Visita----------------");
-        for(int i=0; i<20; i++){
-            System.out.println("Nome:.."+this.getNome()[i]);
-            System.out.println("Sexo:.."+this.getSexo()[i]);
-            System.out.println("Rg:.."+this.getRg()[i]);
-            System.out.println("Cpf:.."+this.getCpf()[i]);
-        }    }
-*/
     @Override
     public void mostrarDadosPessoa() {
         System.out.println("Visita----------------");

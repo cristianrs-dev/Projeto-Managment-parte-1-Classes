@@ -13,8 +13,8 @@ public class Cargo {
         this.id=idCargo;
         this.Funcao = Funcao;
         this.salario = salario;
-        this.dataAdmissao = dataAdmissao;
-        this.dataDemissao = dataDemissao;
+        this.dataAdmissao = null;
+        this.dataDemissao = null;
     }
 
     public int getId() {
