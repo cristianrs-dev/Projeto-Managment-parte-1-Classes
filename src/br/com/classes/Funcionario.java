@@ -3,13 +3,13 @@ package br.com.classes;
 public class Funcionario extends PessoaFisica{
     private int idCondominio;
     private Cargo cargo;
-    private int idFuncionario;
+    private int idCargo;
 
     public Funcionario(int idCondominio, Cargo cargo, int idCargo, String nome, char sexo, String rg, String cpf) {
         super(nome, sexo, rg, cpf);
         this.idCondominio = idCondominio;
         this.cargo = cargo;
-        this.idFuncionario = idCargo;
+        this.idCargo = idCargo;
     }
 
     public int getIdCondominio() {
@@ -28,12 +28,12 @@ public class Funcionario extends PessoaFisica{
         this.cargo = cargo;
     }
 
-    public int getIdFuncionario() {
-        return idFuncionario;
+    public int getIdCargo() {
+        return idCargo;
     }
 
-    public void setIdFuncionario(int idFuncionario) {
-        this.idFuncionario = idFuncionario;
+    public void setIdCargo(int idCargo) {
+        this.idCargo = idCargo;
     }
     
     
@@ -51,7 +51,7 @@ public class Funcionario extends PessoaFisica{
     public void mostrarDadosPessoa() {
             System.out.println("---------Dados Funcionario----------");
             System.out.println("Condominio:.."+this.getIdCondominio());
-            System.out.println("Codigo:.."+this.getIdFuncionario());
+            System.out.println("Codigo:.."+this.getIdCargo());
             System.out.println("Nome:.."+this.getNome());
             System.out.println("Sexo:.."+this.getSexo());
             System.out.println("Rg:.."+this.getRg());
