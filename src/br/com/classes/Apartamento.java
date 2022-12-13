@@ -1,30 +1,30 @@
 package br.com.classes;
 
 public class Apartamento {
-    private int idApartamento;
+    private int id;
     private byte numeroApartamento;
     private byte qtdQuarto;
     private byte andar;
     private float valor;
-    private int idCondominio;
+    private Condominio condominio;
 
    
 
-    public Apartamento(int idApartamento, byte numeroApartamento, byte qtdQuarto, byte andar, float valor, int idCondominio) {
-        this.idApartamento = idApartamento;
+    public Apartamento(int id, byte numeroApartamento, byte qtdQuarto, byte andar, float valor, Condominio condominio) {
+        this.id = id;
         this.numeroApartamento = numeroApartamento;
         this.qtdQuarto = qtdQuarto;
         this.andar = andar;
         this.valor = valor;
-        this.idCondominio = idCondominio;
+        this.condominio =condominio;
     }
 
-    public int getIdApartamento() {
-        return idApartamento;
+    public int getId() {
+        return id;
     }
 
-    public void setIdApartamento(int idApartamento) {
-        this.idApartamento = idApartamento;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public byte getNumeroApartamento() {
@@ -59,18 +59,20 @@ public class Apartamento {
         this.valor = valor;
     }
 
-    public int getIdCondominio() {
-        return idCondominio;
+    public Condominio getCondominio() {
+        return condominio;
     }
 
-    public void setIdCondominio(int idCondominio) {
-        this.idCondominio = idCondominio;
+    public void setCondominio(Condominio condominio) {
+        this.condominio = condominio;
     }
+
+    
     
     public void mostrarApartamento(){
             System.out.println("----------Dados Apartamento---------");
-            System.out.println("Condominio:.."+this.getIdCondominio());
-            System.out.println("cod:.."+this.getIdApartamento());
+            System.out.println("Condominio:.."+this.getCondominio());
+            System.out.println("cod:.."+this.getId());
             System.out.println("numero:.."+this.getNumeroApartamento());
             System.out.println("quartos:.."+this.getQtdQuarto());
             System.out.println("andar:.."+this.getAndar());

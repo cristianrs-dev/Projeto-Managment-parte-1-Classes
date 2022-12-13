@@ -2,10 +2,13 @@ package br.com.classes;
 
 
 public class Morador extends PessoaFisica{
+    private int id;
+    private String tipo;
     private Apartamento apartamento;
     private Veiculo veiculo;
     private Visitante visita;
     private Secretaria secretaria;
+<<<<<<< HEAD
     private int idCondominio;
     private int idSecretaria;
     private int idVeiculo;
@@ -15,11 +18,21 @@ public class Morador extends PessoaFisica{
     private int idEspaco;
 
     public Morador(Apartamento apartamento, Veiculo veiculo, Visitante visita, Secretaria secretaria, int idCondominio, int idSecretaria, int idVeiculo, int idServico, int idVisita, int idAp, int idEspaco, String nome, char sexo, String rg, String cpf) {
+=======
+    private Espaco espaco;
+    private Servico servico;
+    private Condominio condominio;
+
+    public Morador(int id, String tipo, Apartamento apartamento, Veiculo veiculo, Visitante visita, Secretaria secretaria, Espaco espaco, Servico servico,Condominio condominio, String nome, char sexo, String rg, String cpf) {
+>>>>>>> 150ea5b9a570a617989f22014f5a50e71530434a
         super(nome, sexo, rg, cpf);
+        this.id = id;
+        this.tipo = tipo;
         this.apartamento = apartamento;
         this.veiculo = veiculo;
         this.visita = visita;
         this.secretaria = secretaria;
+<<<<<<< HEAD
         this.idCondominio = idCondominio;
         this.idSecretaria = idSecretaria;
         this.idVeiculo = idVeiculo;
@@ -27,6 +40,27 @@ public class Morador extends PessoaFisica{
         this.idVisita = idVisita;
         this.idAp = idAp;
         this.idEspaco = idEspaco;
+=======
+        this.espaco = espaco;
+        this.servico = servico;
+        this.condominio = condominio;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+>>>>>>> 150ea5b9a570a617989f22014f5a50e71530434a
     }
 
     
@@ -63,6 +97,7 @@ public class Morador extends PessoaFisica{
         this.secretaria = secretaria;
     }
 
+<<<<<<< HEAD
     public int getIdCondominio() {
         return idCondominio;
     }
@@ -120,9 +155,32 @@ public class Morador extends PessoaFisica{
     }
     
     
+=======
+    public Espaco getEspaco() {
+        return espaco;
+    }
+
+    public void setEspaco(Espaco espaco) {
+        this.espaco = espaco;
+    }
+
+    public Servico getServico() {
+        return servico;
+    }
+
+    public void setServico(Servico servico) {
+        this.servico = servico;
+    }
+
+    public Condominio getCondominio() {
+        return condominio;
+    }
+
+    public void setCondominio(Condominio condominio) {
+        this.condominio = condominio;
+    }
+>>>>>>> 150ea5b9a570a617989f22014f5a50e71530434a
     
-    
- 
     @Override
     public void mostrarDadosPessoa() {
         
@@ -131,6 +189,7 @@ public class Morador extends PessoaFisica{
             System.out.println("Sexo:.."+this.getSexo());
             System.out.println("Rg:.."+this.getRg());
             System.out.println("Cpf:.."+this.getCpf());
+            System.out.println("Condominio:.."+this.getCondominio().getNome());
             apartamento.mostrarApartamento();
             veiculo.mostrarVeiculo();
             visita.mostrarDadosPessoa();

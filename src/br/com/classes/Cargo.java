@@ -3,26 +3,26 @@
 import java.time.LocalDate;
 
 public class Cargo {
-    private int idCargo;
+    private int id;
     private String Funcao;
     private float salario;
     private LocalDate dataAdmissao;
     private LocalDate dataDemissao;
 
     public Cargo(int idCargo,String Funcao, float salario, LocalDate dataAdmissao, LocalDate dataDemissao) {
-        this.idCargo=idCargo;
+        this.id=idCargo;
         this.Funcao = Funcao;
         this.salario = salario;
-        this.dataAdmissao = dataAdmissao;
-        this.dataDemissao = dataDemissao;
+        this.dataAdmissao = null;
+        this.dataDemissao = null;
     }
 
-    public int getIdCargo() {
-        return idCargo;
+    public int getId() {
+        return id;
     }
 
-    public void setIdCargo(int idCargo) {
-        this.idCargo = idCargo;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFuncao() {
@@ -59,7 +59,7 @@ public class Cargo {
 
     public void mostrarCargo(){
                 System.out.println("---------Dados do Cargo-----------");
-                System.out.println("Codigo:.."+this.getIdCargo());
+                System.out.println("Codigo:.."+this.getId());
                 System.out.println("funcao:.."+this.getFuncao());
                 System.out.println("salario:.."+this.getSalario());
                 System.out.println("admissao:.."+this.getDataAdmissao());

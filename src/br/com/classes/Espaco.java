@@ -3,26 +3,26 @@ package br.com.classes;
 import java.time.LocalDate;
 
 public class Espaco {
-    private int idEspaco;
+    private int id;
     private String descricao;
     private LocalDate horaInicio;
     private LocalDate horaTermino;
-    private int idCondominio;
+    private Condominio condominio;
 
-    public Espaco(int idEspaco, String descricao, LocalDate horaInicio, LocalDate horaTermino, int idCondominio) {
-        this.idEspaco = idEspaco;
+    public Espaco(int idEspaco, String descricao, LocalDate horaInicio, LocalDate horaTermino, Condominio condominio) {
+        this.id = idEspaco;
         this.descricao = descricao;
         this.horaInicio = horaInicio;
         this.horaTermino = horaTermino;
-        this.idCondominio = idCondominio;
+        this.condominio = condominio;
     }
 
-    public int getIdEspaco() {
-        return idEspaco;
+    public int getId() {
+        return id;
     }
 
-    public void setIdEspaco(int idEspaco) {
-        this.idEspaco = idEspaco;
+    public void setId(int id) {
+        this.id = id;
     }
 
     
@@ -50,19 +50,18 @@ public class Espaco {
         this.horaTermino = horaTermino;
     }
 
-    public int getIdCondominio() {
-        return idCondominio;
+    public Condominio getCondominio() {
+        return condominio;
     }
 
-    public void setIdCondominio(int idCondominio) {
-        this.idCondominio = idCondominio;
+    public void setCondominio(Condominio condominio) {
+        this.condominio = condominio;
     }
-    
     
     public void mostrarEspaco(){
         System.out.println("----------Espaco Interno------------");
-        System.out.println("Condominio:.."+this.getIdCondominio());
-        System.out.println("codigo:.."+this.getIdEspaco());
+        System.out.println("Condominio:.."+this.getCondominio());
+        System.out.println("codigo:.."+this.getId());
         System.out.println("descricao:.."+this.getDescricao());
         System.out.println("inicio:.."+this.getHoraInicio());
         System.out.println("termino:.."+this.getHoraTermino());

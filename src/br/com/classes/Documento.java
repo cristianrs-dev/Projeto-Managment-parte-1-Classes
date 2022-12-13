@@ -3,24 +3,24 @@ package br.com.classes;
 import java.time.LocalDate;
 
 public class Documento {
-    private int idDocumento;
+    private int id;
     private String[] tipo;
     private LocalDate[] dataEntrada;
     private LocalDate[] dataEmissao;
 
     public Documento(int idDocumento, String[] tipo, LocalDate[] dataEntrada, LocalDate[] dataEmissao) {
-        this.idDocumento = idDocumento;
+        this.id = idDocumento;
         this.tipo = tipo;
         this.dataEntrada = dataEntrada;
         this.dataEmissao = dataEmissao;
     }
 
-    public int getIdDocumento() {
-        return idDocumento;
+    public int getId() {
+        return id;
     }
 
-    public void setIdDocumento(int idDocumento) {
-        this.idDocumento = idDocumento;
+    public void setId(int id) {
+        this.id = id;
     }
     
     public String[] getTipo() {
@@ -54,7 +54,7 @@ public class Documento {
         {
             if(!this.tipo[i].equals("null"))
             {
-                System.out.println("codigo:.."+this.getIdDocumento());
+                System.out.println("codigo:.."+this.getId());
                 System.out.println("tipo:.."+this.getTipo()[i]);
                 System.out.println("entrada:.."+this.getDataEntrada()[i]);
                 System.out.println("emissão:.."+this.getDataEmissao()[i]);
